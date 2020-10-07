@@ -20,6 +20,8 @@ export interface MovieInterface {
 interface ContextInterface {
     movies: MovieInterface[] | undefined,
     setMovies: React.Dispatch<React.SetStateAction<MovieInterface[] | undefined>>,
+    movieCover: number,
+    setMovieCover: React.Dispatch<React.SetStateAction<number>>,
     error: string,
     setError: React.Dispatch<React.SetStateAction<string>>,
     loading: boolean,
@@ -30,11 +32,12 @@ export const MovieContext = createContext<ContextInterface>({} as ContextInterfa
 
 export const MovieProvider = (props: Props) => {
     const [ movies, setMovies ] = useState<MovieInterface[] | undefined>();
+    const [ movieCover, setMovieCover ] = useState(Math.floor(Math.random() * 7) + 1 );
     const [ error, setError ] = useState('');
     const [ loading, setLoading ] = useState(false);
 
     return (
-        <MovieContext.Provider value={{ movies, setMovies, error, setError, loading, setLoading }} >
+        <MovieContext.Provider value={{ movies, setMovies, movieCover, setMovieCover, error, setError, loading, setLoading }} >
             { props.children }
         </MovieContext.Provider>
     )

@@ -2,10 +2,10 @@ import { createGlobalStyle } from 'styled-components/macro';
 
 export const GlobalStyle = createGlobalStyle`
     :root {
-        --color-background: #171717;
+        --color-background: #14181c;
 
-        --color-primary: #728DC2;
-        --color-secondary: #002650;
+        --color-primary: #00b020;
+        --color-secondary: #2c3440;
         --color-text-title: #1f1f1d;
         --color-text-complement: #DDDDDD;
         --color-button-text: #FFFFFF;

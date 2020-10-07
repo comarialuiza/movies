@@ -3,7 +3,7 @@ import React, { useState, useContext, FormEvent } from 'react';
 import api from './../../services/api';
 import { MovieContext } from './../../context/MovieContext'; 
 
-import { Container, Title, FormContainer, Input, Button } from './styles';
+import { Container, FormContainer, Input, Button } from './styles';
 
 const Form: React.FC = () => {
     const [ code, setCode ] = useState('');

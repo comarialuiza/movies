@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { MovieContext, MovieInterface } from './../../context/MovieContext';
 import Movie from '../Movie';
 
-import { Container } from './styles';
+import { Container, Title } from './styles';
 
 const MovieList: React.FC = () => {
     const { movies, error, loading } = useContext(MovieContext);
@@ -10,11 +10,19 @@ const MovieList: React.FC = () => {
     console.log('movies', movies);
 
     return (
-        <Container>
-            { movies && movies.map((movie: MovieInterface) => (
-                <Movie key={ movie.imdbId } movie={ movie }/>
-            )) }
-        </Container>
+        <>
+            { movies && (
+                <>
+                    <Title>Resultado da pesquisa</Title>
+                    <Container>
+                        { movies.map((movie: MovieInterface) => (
+                            <Movie key={ movie.imdbId } movie={ movie }/>
+                        )) }
+                    </Container>
+                </>
+            )}
+            
+        </>
     );
 }
 
