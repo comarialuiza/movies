@@ -14,10 +14,12 @@ export interface MovieInterface {
     Director: string,
     Plot: string,
     Poster: string,
-    imdbId: string
+    imdbID: string
 }
 
 interface ContextInterface {
+    code: string,
+    setCode: React.Dispatch<React.SetStateAction<string>>,
     movies: MovieInterface[] | undefined,
     setMovies: React.Dispatch<React.SetStateAction<MovieInterface[] | undefined>>,
     movieCover: number,
@@ -31,13 +33,14 @@ interface ContextInterface {
 export const MovieContext = createContext<ContextInterface>({} as ContextInterface);
 
 export const MovieProvider = (props: Props) => {
+    const [ code, setCode ] = useState('');
     const [ movies, setMovies ] = useState<MovieInterface[] | undefined>();
     const [ movieCover, setMovieCover ] = useState(Math.floor(Math.random() * 7) + 1 );
     const [ error, setError ] = useState('');
     const [ loading, setLoading ] = useState(false);
 
     return (
-        <MovieContext.Provider value={{ movies, setMovies, movieCover, setMovieCover, error, setError, loading, setLoading }} >
+        <MovieContext.Provider value={{ code, setCode, movies, setMovies, movieCover, setMovieCover, error, setError, loading, setLoading }} >
             { props.children }
         </MovieContext.Provider>
     )

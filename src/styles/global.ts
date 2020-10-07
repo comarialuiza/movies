@@ -26,6 +26,10 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
     }
 
+    html {
+        scroll-behavior: smooth;
+    }
+
     body, #root {
         min-height: 100vh;
         background-color: var(--color-background);
@@ -34,9 +38,5 @@ export const GlobalStyle = createGlobalStyle`
     body, input, button, textarea {
         font: 300 1.6rem 'Source Sans Pro', sans-serif;
         color: var(--color-text-base);
-    }
-
-    .dark-theme {
-        filter: hue-rotate(180deg) invert(100%);
     }
 `;

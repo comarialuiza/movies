@@ -6,9 +6,7 @@ import { MovieContext } from './../../context/MovieContext';
 import { Container, FormContainer, Input, Button } from './styles';
 
 const Form: React.FC = () => {
-    const [ code, setCode ] = useState('');
-
-    const { setMovies, setError, setLoading } = useContext(MovieContext);
+    const { code, setCode, setMovies, setError, setLoading } = useContext(MovieContext);
 
     const apiKey = '&apikey=c1a34e61'
 
