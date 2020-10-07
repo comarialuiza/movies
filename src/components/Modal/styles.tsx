@@ -18,4 +18,10 @@ export const ModalContainer = styled.div`
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
+
+    max-width: 600px;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
 `;
