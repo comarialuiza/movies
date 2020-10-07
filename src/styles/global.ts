@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components/macro';
 
 export const GlobalStyle = createGlobalStyle`
     :root {
-        --color-background: #f7f6f1;
+        --color-background: #171717;
 
         --color-primary: #728DC2;
         --color-secondary: #002650;
@@ -15,6 +15,8 @@ export const GlobalStyle = createGlobalStyle`
         --color-danger: #faad14;
         --color-error: #ff4d4f;
 
+        --color-overlay: rgba(23, 23, 23, 0.8);
+
         font-size: 62.5%;
     }
 
@@ -26,6 +28,7 @@ export const GlobalStyle = createGlobalStyle`
 
     body, #root {
         min-height: 100vh;
+        background-color: var(--color-background);
     }
 
     body, input, button, textarea {

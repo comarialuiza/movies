@@ -14,6 +14,7 @@ export interface MovieInterface {
     Director: string,
     Plot: string,
     Poster: string,
+    imdbId: string
 }
 
 interface ContextInterface {
