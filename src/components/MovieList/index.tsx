@@ -7,7 +7,7 @@ import { Container, MoviesContainer, Title, Code } from './styles';
 const MovieList: React.FC = () => {
     const { code, movies, error, loading } = useContext(MovieContext);
 
-    console.log('movies', movies);
+    console.log(movies);
 
     return (
         <>
@@ -21,7 +21,6 @@ const MovieList: React.FC = () => {
                     </MoviesContainer>
                 </Container>
             )}
-            
         </>
     );
 }
