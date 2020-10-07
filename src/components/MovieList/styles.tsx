@@ -3,7 +3,14 @@ import styled from 'styled-components/macro';
 export const Container = styled.div`
     max-width: 950px;
     margin: 0 auto;
-    padding: 20px 40px;
+
+    @media (min-width: 601px) {
+        padding: 20px 40px;
+    }
+
+    @media (max-width: 600px) {
+        padding: 20px;
+    }
 `;
 
 export const MoviesContainer = styled.div`

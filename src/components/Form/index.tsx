@@ -6,7 +6,7 @@ import { MovieContext } from './../../context/MovieContext';
 import { Container, FormContainer, Input, Button } from './styles';
 
 const Form: React.FC = () => {
-    const { code, setCode, setMovies, setError, setLoading } = useContext(MovieContext);
+    const { code, setCode, movies, setMovies, setError, setLoading } = useContext(MovieContext);
 
     const apiKey = '&apikey=c1a34e61'
 
@@ -24,6 +24,8 @@ const Form: React.FC = () => {
             const res = await api.get(`/?s=${code}${apiKey}`);
             setMovies(res.data.Search);
             setLoading(false);
+
+            movies === undefined && setError('Houve um erro com a sua requisição. Por favor tente novamente.');
         } catch(err) {
             setError('Houve um erro com a sua requisição. Por favor tente novamente.');
             setLoading(false);

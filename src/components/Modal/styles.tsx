@@ -12,6 +12,8 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
     z-index: 999;
+
+    padding: 40px;
 `;
 
 export const ModalContainer = styled.div`
@@ -20,7 +22,8 @@ export const ModalContainer = styled.div`
     border-radius: 8px;
     box-shadow: 3px 3px 5px 6px var(--color-background); 
     max-width: 600px;
-
+    overflow: scroll;
+    max-height: 100%;
     position: relative;
     
     @media (min-width: 601px) {
@@ -35,29 +38,56 @@ export const ModalContainer = styled.div`
         width: 30px;
         display: block;
         position: absolute;
-        top: -30px;
-        right: -30px;
+        
         line-height: 30px;
         text-align: center;
         color: var(--color-white);
         font-size: 20px;
+
+        @media (min-width: 631px) {
+            top: -30px;
+            right: -30px;
+        }
+
+        @media (max-width: 630px) and (min-width: 401px) {
+            top: 20px;
+            right: 20px;
+        }
+
+        @media (max-width: 630px) {
+            top: 3px;
+            right: 3px;
+        }
     }
 `;
 
 export const VisualContainer = styled.div`
-    @media (min-width: 601px) {
+    position: relative;
+
+    @media (max-width: 360px) {
+        max-width: 100%;
+    }
+
+    @media (min-width: 361px) {
         max-width: 220px;
+    }
+
+    @media (max-width: 600px) {
+        margin: 0 auto;
+    }
+
+    @media (min-width: 601px) {
         margin-right: 20px;
     }
-    
-    position: relative;
 `;
 
 export const ContentContainer = styled.div`
     @media (min-width: 601px) {
         width: calc(100% - 220px - 20px);
-        max-height: 364px;
-        overflow: scroll;
+    }
+
+    @media (max-width: 600px) {
+        margin-top: 30px;
     }
 `;
 
@@ -71,6 +101,10 @@ export const Description = styled.p`
     font-size: 14px;
     line-height: 20px;
     margin-top: 24px;
+    text-align: justify;
+
+    max-height: 242px;
+    overflow: scroll;
 `;
 
 export const Image = styled.img`

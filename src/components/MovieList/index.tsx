@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
 import { MovieContext, MovieInterface } from './../../context/MovieContext';
-import Movie from '../Movie';
+import Movie from './../Movie';
+import Error from './../Error';
+import Loading from './../Loading';
 
 import { Container, MoviesContainer, Title, Code } from './styles';
 
@@ -11,6 +13,8 @@ const MovieList: React.FC = () => {
 
     return (
         <>
+            { error && !movies && <Error>Houve um erro processando sua requisição. Por favor tente novamente.</Error> }
+            { loading && <Loading /> }
             { movies && (
                 <Container>
                     <Title>Resultado da pesquisa para: <Code>{ code }</Code></Title>
