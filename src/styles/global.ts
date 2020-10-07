@@ -7,6 +7,7 @@ export const GlobalStyle = createGlobalStyle`
         --color-primary: #00b020;
         --color-secondary: #2c3440;
         --color-text-title: #1f1f1d;
+        --color-description: #9ab;
         --color-text-complement: #DDDDDD;
         --color-button-text: #FFFFFF;
         --color-white: #FFFFFF;
@@ -16,6 +17,8 @@ export const GlobalStyle = createGlobalStyle`
         --color-error: #ff4d4f;
 
         --color-overlay: rgba(23, 23, 23, 0.8);
+
+        --color-overlay-light: rgba(23, 23, 23, 0.2);
 
         font-size: 62.5%;
     }

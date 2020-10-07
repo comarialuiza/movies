@@ -2,13 +2,16 @@ import styled from 'styled-components/macro';
 
 export const Container = styled.div`
     z-index: 3;
+
+    @media (max-width: 600px) {
+        margin-top: 20px;
+    }
 `;
 
 export const FormContainer = styled.form`
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    
+    justify-content: space-between; 
 `;
 
 export const Input = styled.input`
@@ -19,6 +22,8 @@ export const Input = styled.input`
     height: 38px;
     line-height: 28px;
     border-radius: 6px;
+
+    width: calc(100% - 90px - 20px);
 
     &&:focus {
         outline-style: solid;
@@ -32,7 +37,7 @@ export const Button = styled.button`
     color: var(--color-white);
     border-radius: 6px;
 
-    font-size: 12px;
+    font-size: 14px;
     text-transform: uppercase;
     padding: 8px 12px;
     border: 0;

@@ -12,7 +12,7 @@ const Header: React.FC = () => {
         <Container>
             <ContainerFlex cover={ movieCover }>
                 <Logo>
-                    OMDb Database
+                    Movie Database
                 </Logo>
 
                 <Form />

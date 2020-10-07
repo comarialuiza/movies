@@ -8,7 +8,7 @@ export const Container = styled.div`
 
 export const MoviesContainer = styled.div`
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(162px, 1fr));
     grid-gap: 15px;
 `;
 

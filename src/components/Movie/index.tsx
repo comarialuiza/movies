@@ -12,7 +12,9 @@ interface Props {
 const Movie: React.FC<Props> = ({ movie }) => {
   const { currentMovieFullData, setCurrentMovieFullData, modalActive, setModalActive, setError } = useContext(MovieContext);
 
-  const apiKey = '&apikey=c1a34e61'
+  const apiKey = '&apikey=c1a34e61';
+
+  const standardMoviePoster = 'https://sd.keepcalms.com/i/keep-calm-im-currently-unavailable.png';
 
   const handleGetActiveMovie = async () => {
     try {
@@ -28,7 +30,7 @@ const Movie: React.FC<Props> = ({ movie }) => {
     <>
       <Container onClick={ handleGetActiveMovie }>
         <Title>{ movie.Title }</Title>
-        <Poster src={ movie.Poster } />
+        <Poster src={ movie.Poster === 'N/A' ? standardMoviePoster : movie.Poster } />
       </Container>
       { modalActive && currentMovieFullData && <Modal activeMovie={ currentMovieFullData }/> }
     </>
