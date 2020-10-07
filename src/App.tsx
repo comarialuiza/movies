@@ -1,8 +1,16 @@
 import React from 'react';
 
+import Home from './pages/Home';
+import { GlobalStyle } from './styles/global';
+
+import { MovieProvider } from './context/MovieContext';
+
 function App() {
   return (
-    <h1>Movies!</h1>
+    <MovieProvider>
+      <Home />
+      <GlobalStyle />
+    </MovieProvider>
   );
 }
 
