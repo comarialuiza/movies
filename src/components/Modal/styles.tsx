@@ -45,8 +45,8 @@ export const ModalContainer = styled.div`
         font-size: 20px;
 
         @media (min-width: 631px) {
-            top: -30px;
-            right: -30px;
+            top: -5px;
+            right: -5px;
         }
 
         @media (max-width: 630px) and (min-width: 401px) {
