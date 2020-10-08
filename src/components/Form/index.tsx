@@ -1,4 +1,4 @@
-import React, { useState, useContext, FormEvent } from 'react';
+import React, { useContext, FormEvent } from 'react';
 
 import api from './../../services/api';
 import { MovieContext } from './../../context/MovieContext'; 

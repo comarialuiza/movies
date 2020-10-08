@@ -1,8 +1,6 @@
 import React, { useContext } from 'react';
 import { MovieContext, MovieInterface } from './../../context/MovieContext';
 import Movie from './../Movie';
-import Error from './../Error';
-import Loading from './../Loading';
 
 import { Container, MoviesContainer, Title, Code } from './styles';
 
