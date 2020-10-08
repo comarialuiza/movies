@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Home from './pages/Home';
+import Routes from './routes';
 import { GlobalStyle } from './styles/global';
 
 import { MovieProvider } from './context/MovieContext';
@@ -8,7 +8,7 @@ import { MovieProvider } from './context/MovieContext';
 function App() {
   return (
     <MovieProvider>
-      <Home />
+      <Routes />
       <GlobalStyle />
     </MovieProvider>
   );
