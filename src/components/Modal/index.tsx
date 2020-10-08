@@ -11,10 +11,13 @@ const Modal: React.FC<Props> = ({ activeMovie }) => {
     const { setModalActive, setCurrentMovieFullData } = useContext(MovieContext);
 
     return (
-        <Container onClick={ () => { 
-            setModalActive(false);
-            setCurrentMovieFullData(undefined);
-        }}>
+        <Container 
+            data-cy='modal'
+            onClick={ () => { 
+                setModalActive(false);
+                setCurrentMovieFullData(undefined);
+            }}
+        >
             <ModalContainer>
                 <VisualContainer>
                     <Image src={ activeMovie.Poster === 'N/A' ? standardMoviePoster : activeMovie.Poster }/>

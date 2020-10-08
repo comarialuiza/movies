@@ -25,7 +25,7 @@ const Form: React.FC = () => {
             setMovies(res.data.Search);
             setLoading(false);
 
-            movies === undefined && setError('Houve um erro com a sua requisição. Por favor tente novamente.');
+            movies === undefined && setError('Não encontramos nenhum filme com esse nome. Por favor tente novamente.');
         } catch(err) {
             setError('Houve um erro com a sua requisição. Por favor tente novamente.');
             setLoading(false);
@@ -38,10 +38,10 @@ const Form: React.FC = () => {
                 <Input 
                     placeholder='Nome do filme'
                     onChange={({ target }) => setCode(target.value)}
-                    data-testid='input'
+                    data-cy='movie-name'
                 />
 
-                <Button type='submit' data-testid='button'>Pesquisar</Button>
+                <Button type='submit' data-cy='movie-submit'>Pesquisar</Button>
             </FormContainer>
         </Container>
     );

@@ -12,8 +12,8 @@ const MovieList: React.FC = () => {
     return (
         <>
             { movies && (
-                <Container>
-                    <Title>Resultado da pesquisa para: <Code>{ code }</Code></Title>
+                <Container data-cy='movie-list'>
+                    <Title>Resultado da pesquisa para: <Code data-testid='code'>{ code }</Code></Title>
                     <MoviesContainer>
                         { movies.map((movie: MovieInterface) => (
                             <Movie key={ movie.imdbID } movie={ movie }/>

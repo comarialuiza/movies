@@ -12,5 +12,5 @@ yarn && yarn start
 
 Para realizar os testes
 ```sh
-yarn run test
+yarn run cypress open
 ``` 

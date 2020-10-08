@@ -20,7 +20,7 @@ const Header: React.FC = () => {
                     <ContainerOverlay />
                 </ContainerFlex>
 
-                { error && !movies && <Error>Houve um erro processando sua requisição. Por favor tente novamente.</Error> }
+                { error && !movies && <Error>{ error }</Error> }
                 { loading && <Loading /> }
             </ContainerBackground>
 

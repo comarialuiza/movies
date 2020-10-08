@@ -21,12 +21,12 @@ const Login: React.FC = () => {
 
                 <FormContainer>
                     <Label>Nome de usuário</Label>
-                    <Input />
+                    <Input data-cy='username'/>
 
                     <Label>Senha</Label>
-                    <Input type="password"/>
+                    <Input data-cy='password' type="password"/>
 
-                    <Button onClick={ handleLogin }>Entrar</Button>
+                    <Button data-cy='login-submit' onClick={ handleLogin }>Entrar</Button>
                 </FormContainer>
             </ContentContainer>
         </Container>
