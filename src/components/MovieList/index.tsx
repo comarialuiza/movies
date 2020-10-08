@@ -5,7 +5,7 @@ import Movie from './../Movie';
 import { Container, MoviesContainer, Title, Code } from './styles';
 
 const MovieList: React.FC = () => {
-    const { code, movies } = useContext(MovieContext);
+    const { movies } = useContext(MovieContext);
 
     console.log(movies);
 
@@ -13,7 +13,6 @@ const MovieList: React.FC = () => {
         <>
             { movies && (
                 <Container data-cy='movie-list'>
-                    <Title>Resultado da pesquisa para: <Code data-testid='code'>{ code }</Code></Title>
                     <MoviesContainer>
                         { movies.map((movie: MovieInterface) => (
                             <Movie key={ movie.imdbID } movie={ movie }/>

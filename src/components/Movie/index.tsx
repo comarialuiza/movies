@@ -35,7 +35,10 @@ const Movie: React.FC<Props> = ({ movie }) => {
       <Container>
         <Overlay>
           <Title onClick={ handleGetActiveMovie }>{ movie.Title }</Title>
-          <Like onClick={ () => likeImage === outlineHeart ? setLikeImage(fullHeart) : setLikeImage(outlineHeart) }>
+          <Like 
+            data-cy='like'
+            onClick={ () => likeImage === outlineHeart ? setLikeImage(fullHeart) : setLikeImage(outlineHeart) }
+          >
             <LikeImage src={ likeImage } />
           </Like>
         </Overlay>

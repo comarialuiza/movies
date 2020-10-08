@@ -28,13 +28,13 @@ describe('Movie search', () => {
         cy.contains('Não encontramos nenhum filme com esse nome. Por favor tente novamente.').should('exist');
     });
 
-    it('Searches a movie with a valid name', () => {
+    it('Searches a movie with a valid name and opens modal', () => {
         cy.get('[data-cy=movie-name]').type('star trek');
         cy.get('[data-cy=movie-submit]').click();
 
-        cy.contains('Resultado da pesquisa para: star trek').should('exist');
-
-        cy.get('[data-cy=movie-list]').contains('Star Trek Beyond').click();
-        cy.get('[data-cy=modal]').contains('2016');
+        cy.get('[data-cy=movie-list]').contains('Star Trek Beyond')
+            .click();
+        cy.get('[data-cy=modal]')
+            .contains('2016');
     });
 });

@@ -39,6 +39,7 @@ export const Title = styled.h2`
     text-align: center;
     font-weight: normal;
     line-height: 22px;
+    padding: 30px 0;
 `;
 
 export const Container = styled.div`

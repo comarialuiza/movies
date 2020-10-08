@@ -24,8 +24,10 @@ const Form: React.FC = () => {
             const res = await api.get(`/?s=${code}${apiKey}`);
             setMovies(res.data.Search);
             setLoading(false);
-
+            
             movies === undefined && setError('Não encontramos nenhum filme com esse nome. Por favor tente novamente.');
+
+            window.scrollBy(0, 1000);
         } catch(err) {
             setError('Houve um erro com a sua requisição. Por favor tente novamente.');
             setLoading(false);
