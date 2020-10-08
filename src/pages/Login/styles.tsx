@@ -6,7 +6,7 @@ export const Container = styled.div`
         padding: 50px;
         display: flex;
         align-items: stretch;
-        justify-content: space-between;
+        justify-content: center;
     }
 
     @media (max-width: 870px) {
@@ -30,6 +30,7 @@ export const VisualContainer = styled.div<{ image: string }>`
 
     @media (min-width: 871px) {
         width: 50%;
+        max-width: 600px;
         border-radius: 50px 0 0 50px;
     }
 
@@ -63,7 +64,8 @@ export const ContentContainer = styled.div`
         padding: 40px;
         border-radius: 0 50px 50px 0;
         border-left: 0;
-        width: 50%;
+
+        max-width: 600px;
     }
 
     @media (max-width: 870px) {
@@ -116,6 +118,8 @@ export const Button = styled.button`
     border: 0;
     width: 100%;
     margin-top: 12px;
+    cursor: pointer;
+    border-bottom: 2px solid var(--color-white);
 `;
 
 export const Image = styled.img`
