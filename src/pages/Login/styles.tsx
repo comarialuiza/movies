@@ -98,6 +98,13 @@ export const Input = styled.input`
     margin-bottom: 12px;
     width: 100%;
     border-bottom: 2px solid var(--color-primary);
+    transition: border-bottom .2s;
+    font-size: 14px;
+
+    &:focus {
+       outline: none;
+       border-bottom: 5px solid var(--color-primary); 
+    }
 `;
 
 export const Button = styled.button`

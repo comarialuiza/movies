@@ -13,7 +13,7 @@ const Login: React.FC = () => {
 
     return (
         <Container>
-            <VisualContainer image='https://pmcvariety.files.wordpress.com/2013/08/abouttime.jpg' />
+            <VisualContainer image='./images/login_background.jpg' />
 
             <ContentContainer>
                 <Image src='./images/logo.png'/>

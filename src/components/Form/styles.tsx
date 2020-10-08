@@ -25,11 +25,13 @@ export const Input = styled.input`
 
     width: calc(100% - 90px - 20px);
 
-    &&:focus {
-        outline-style: solid;
-        outline-color: var(--color-primary);
-    }
+    border-bottom: 2px solid var(--color-primary);
+    transition: border-bottom .2s;
 
+    &:focus {
+       outline: none;
+       border-bottom: 5px solid var(--color-primary); 
+    }
 `;
 
 export const Button = styled.button`

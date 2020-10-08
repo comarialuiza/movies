@@ -51,7 +51,7 @@ export const ContainerBackground = styled.div<{ cover: number }>`
         padding: 20px 40px 400px 40px;
     }
 
-    @media (max-width: 400px) {
+    @media (max-width: 600px) {
         padding: 20px 20px 300px 20px;
     }
 `;

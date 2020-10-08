@@ -20,11 +20,12 @@ export const ModalContainer = styled.div`
     background-color: var(--color-background);
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 3px 3px 5px 6px var(--color-background); 
     max-width: 600px;
     overflow: scroll;
     max-height: 100%;
     position: relative;
+
+    border-left: 5px solid var(--color-primary);
     
     @media (min-width: 601px) {
         display: flex;
@@ -34,29 +35,24 @@ export const ModalContainer = styled.div`
 
     &:after {
         content: 'X';
-        height: 30px;
-        width: 30px;
+        height: 10px;
+        width: 10px;
         display: block;
         position: absolute;
         
-        line-height: 30px;
+        line-height: 10px;
         text-align: center;
         color: var(--color-white);
-        font-size: 20px;
+        font-size: 10px;
 
         @media (min-width: 631px) {
-            top: -5px;
-            right: -5px;
-        }
-
-        @media (max-width: 630px) and (min-width: 401px) {
-            top: 20px;
-            right: 20px;
+            top: 10px;
+            right: 10px;
         }
 
         @media (max-width: 630px) {
-            top: 3px;
-            right: 3px;
+            top: 10px;
+            right: 10px;
         }
     }
 `;
