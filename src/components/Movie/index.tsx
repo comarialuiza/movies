@@ -1,20 +1,24 @@
-import React, { useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import api from './../../services/api';
 import { MovieContext, MovieInterface } from './../../context/MovieContext';
-import { Container, Title, Poster } from './styles';
+import { Container, Overlay, Like, LikeImage, Title, Poster } from './styles';
 
 import Modal from './../Modal';
+
+import outlineHeart from './../../assets/images/heart-shape-outline.svg';
+import fullHeart from './../../assets/images/heart-shape-silhouette.svg';
+import standardMoviePoster from './../../assets/images/standardMoviePoster.png';
 
 interface Props {
   movie: MovieInterface
 }
 
 const Movie: React.FC<Props> = ({ movie }) => {
+  const [ likeImage, setLikeImage ] = useState(outlineHeart);
+
   const { currentMovieFullData, setCurrentMovieFullData, modalActive, setModalActive, setError } = useContext(MovieContext);
 
   const apiKey = '&apikey=c1a34e61';
-
-  const standardMoviePoster = 'https://sd.keepcalms.com/i/keep-calm-im-currently-unavailable.png';
 
   const handleGetActiveMovie = async () => {
     try {
@@ -28,8 +32,13 @@ const Movie: React.FC<Props> = ({ movie }) => {
 
   return (
     <>
-      <Container onClick={ handleGetActiveMovie }>
-        <Title>{ movie.Title }</Title>
+      <Container>
+        <Overlay>
+          <Title onClick={ handleGetActiveMovie }>{ movie.Title }</Title>
+          <Like onClick={ () => setLikeImage(fullHeart) }>
+            <LikeImage src={ likeImage } />
+          </Like>
+        </Overlay>
         <Poster src={ movie.Poster === 'N/A' ? standardMoviePoster : movie.Poster } />
       </Container>
       { modalActive && currentMovieFullData && <Modal activeMovie={ currentMovieFullData }/> }

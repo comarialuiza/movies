@@ -2,14 +2,13 @@ import React, { useContext } from 'react';
 import { MovieInterface, MovieContext } from './../../context/MovieContext';
 import { Container, ModalContainer, VisualContainer, ContentContainer, Title, Description, Image, Rating, Director, DirectorName, InfoBlock, Genre, Runtime, ReleaseYear } from './styles';
 
+import standardMoviePoster from './../../assets/images/standardMoviePoster.png';
 interface Props {
     activeMovie: MovieInterface,
 }
 
 const Modal: React.FC<Props> = ({ activeMovie }) => {
     const { setModalActive, setCurrentMovieFullData } = useContext(MovieContext);
-
-    const standardMoviePoster = 'https://sd.keepcalms.com/i/keep-calm-im-currently-unavailable.png';
 
     return (
         <Container onClick={ () => { 
