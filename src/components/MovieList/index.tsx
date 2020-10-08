@@ -7,14 +7,12 @@ import Loading from './../Loading';
 import { Container, MoviesContainer, Title, Code } from './styles';
 
 const MovieList: React.FC = () => {
-    const { code, movies, error, loading } = useContext(MovieContext);
+    const { code, movies } = useContext(MovieContext);
 
     console.log(movies);
 
     return (
         <>
-            { error && !movies && <Error>Houve um erro processando sua requisição. Por favor tente novamente.</Error> }
-            { loading && <Loading /> }
             { movies && (
                 <Container>
                     <Title>Resultado da pesquisa para: <Code>{ code }</Code></Title>

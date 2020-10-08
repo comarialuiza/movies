@@ -21,9 +21,20 @@ export const ContainerOverlay = styled.div`
 
 export const Container = styled.div`
     width: 100%;
+    position: relative;
 `;
 
-export const ContainerFlex = styled.div<{ cover: number }>`
+export const ContainerFlex = styled.div`
+    width: 100%;
+
+    @media (min-width: 601px) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+`;
+
+export const ContainerBackground = styled.div<{ cover: number }>`
     max-width: 950px;
     margin: 0 auto;
     position: relative;
@@ -31,26 +42,33 @@ export const ContainerFlex = styled.div<{ cover: number }>`
     background-position: center;
     background-repeat: no-repeat;
 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+
     @media (min-width: 601px) {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 20px 40px 600px 40px;
+        padding: 20px 40px 400px 40px;
     }
 
-    @media (max-width: 600px) {
-        padding: 20px 20px 400px 20px;
+    @media (max-width: 400px) {
+        padding: 20px 20px 300px 20px;
     }
 `;
 
-export const Logo = styled.h1`
-    font-size: 30px;
-    font-weight: 300;
-    color: var(--color-white);
+export const Logo = styled.img`
     z-index: 3;
-    font-family: 'Megrim';
+    border-radius: 8px;
+    
+    @media (min-width: 601px) {
+        height: 38px;
+        width: auto;
+    }
 
     @media (max-width: 600px) {
-        text-align: center;
+        width: 150px;
+        height: auto;
+        margin: 0 auto;
+        display: block;
     }
 `;
