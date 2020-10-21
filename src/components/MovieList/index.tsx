@@ -7,8 +7,6 @@ import { Container, MoviesContainer, Title, Code } from './styles';
 const MovieList: React.FC = () => {
     const { movies } = useContext(MovieContext);
 
-    console.log(movies);
-
     return (
         <>
             { movies && (
